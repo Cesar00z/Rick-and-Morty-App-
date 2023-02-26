@@ -24,27 +24,19 @@ body {
 
 .card {
     width: 1000px;
-    margin: 50px auto;
     display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10rem;
     margin: 60px auto;
+
 }
 
 .image {
-    border:2px solid cyan;
+    border:1px solid cyan;
     width: 100%;
     max-width: 200px;
     height: auto;
     border-radius: 5px;
-}
-
-.p-card {
-    color: #fff;
-    text-align: justify;
-    font-size: 24px;
-    margin: 10px 0;
 }
 
 .info {
@@ -53,10 +45,22 @@ body {
     flex-direction: column;
 } 
 
+.p-card {
+    color: #fff;
+    /* text-align: justify; */
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.p-card:nth-child(2) {
+    color:#97ce4c;
+    text-shadow: 2px 2px 3px #000;
+    font-size: 1.5rem;
+}
 
 .footer {
     display: flex;
-    border-top: 1px solid #fff;
+    border-top: 2px solid #fff;
     justify-content: center;
     color: white;
 }
