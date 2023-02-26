@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rick and Morty App</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}" />
+  <title>Rick and Morty App</title>
 </head>
 
 <body>
@@ -17,17 +17,19 @@
 
   <div class="card">
     {% for character in data %}
-    <img class="image" src="{{character['image']}}" alt="">
-    <h2 class="p-card">{{character['name']}}</h2>
-    <p class="p-card">Estado: {{character['status']}}</p>
-    <p class="p-card">Especie: {{character['species']}}</p>
-    <p class="p-card">Origen: {{character['location']['name']}}</p>
-    {% endfor %}
-  </div>
+      <div class="info">
+        <img class="image" src="{{character['image']}}" alt="">
+        <h2 class="p-card">{{character['name']}}</h2>
+        <p class="p-card">Estado: {{character['status']}}</p>
+        <p class="p-card">Especie: {{character['species']}}</p>
+        <p class="p-card">Origen: {{character['location']['name']}}</p>
+      </div>
+      {% endfor %}
+    </div>
 
-  <footer class="footer">
-    <p class="footer-p">Copyright &copy 2022 cesar0z. All Rights Reserved</p>
-  </footer>
+    <footer class="footer">
+      <p class="footer-p">Copyright &copy 2022 cesar0z. All Rights Reserved</p>
+    </footer>
 </body>
 
 </html>
